@@ -1,0 +1,839 @@
+[
+    {
+        "id": "c4602fe9.70d11",
+        "type": "tab",
+        "label": "RELAYS",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8a6ed91b.260e68",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 360,
+        "wires": [
+            [
+                "9e2df1b1.4023e"
+            ]
+        ]
+    },
+    {
+        "id": "55d0fcd2.ac4414",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x01 0xFF",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "1 ON",
+        "x": 410,
+        "y": 1540,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "cec8d13b.d16c4",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 1540,
+        "wires": [
+            [
+                "55d0fcd2.ac4414"
+            ]
+        ]
+    },
+    {
+        "id": "c4d02694.1c4628",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x01 0x00",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "1 OFF",
+        "x": 410,
+        "y": 1600,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6da67b32.d4fdb4",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 1600,
+        "wires": [
+            [
+                "c4d02694.1c4628"
+            ]
+        ]
+    },
+    {
+        "id": "95e7196c.ec64d8",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x02 0xFF",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "2 ON",
+        "x": 410,
+        "y": 1700,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5ff9cb08.ddd9d4",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 1700,
+        "wires": [
+            [
+                "95e7196c.ec64d8"
+            ]
+        ]
+    },
+    {
+        "id": "51de1d38.2f7674",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x02 0x00",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "2 OFF",
+        "x": 410,
+        "y": 1760,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "89771f0f.18254",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 1760,
+        "wires": [
+            [
+                "51de1d38.2f7674"
+            ]
+        ]
+    },
+    {
+        "id": "c44934b.fff05c8",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x03 0xFF",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "3 ON",
+        "x": 410,
+        "y": 1880,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9e3f2bbb.620c08",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 1880,
+        "wires": [
+            [
+                "c44934b.fff05c8"
+            ]
+        ]
+    },
+    {
+        "id": "6268d1e0.c3d74",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x03 0x00",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "3 OFF",
+        "x": 410,
+        "y": 1940,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "11f9c1dc.4a919e",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 1940,
+        "wires": [
+            [
+                "6268d1e0.c3d74"
+            ]
+        ]
+    },
+    {
+        "id": "bb5b0991.d8e5b8",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x04 0xFF",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "4 ON",
+        "x": 410,
+        "y": 2040,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e9929486.7680c8",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 2040,
+        "wires": [
+            [
+                "bb5b0991.d8e5b8"
+            ]
+        ]
+    },
+    {
+        "id": "fdcadd5e.09074",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x04 0x00",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "4 OFF",
+        "x": 410,
+        "y": 2100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "10aeca0a.dc64b6",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 2100,
+        "wires": [
+            [
+                "fdcadd5e.09074"
+            ]
+        ]
+    },
+    {
+        "id": "b5cd5735.61eaa8",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "ALL ON",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 1460,
+        "wires": [
+            [
+                "55d0fcd2.ac4414",
+                "95e7196c.ec64d8",
+                "c44934b.fff05c8",
+                "bb5b0991.d8e5b8"
+            ]
+        ]
+    },
+    {
+        "id": "221fe35f.6260ec",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "ALL OFF",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 2180,
+        "wires": [
+            [
+                "fdcadd5e.09074",
+                "6268d1e0.c3d74",
+                "51de1d38.2f7674",
+                "c4d02694.1c4628"
+            ]
+        ]
+    },
+    {
+        "id": "9e2df1b1.4023e",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x01 0xFF",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "1 ON",
+        "x": 450,
+        "y": 360,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5abbdb35.c6c5d4",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 420,
+        "wires": [
+            [
+                "e598efa6.978e8"
+            ]
+        ]
+    },
+    {
+        "id": "e598efa6.978e8",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x01 0x00",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "1 OFF",
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "36211e56.de9522",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 520,
+        "wires": [
+            [
+                "623eb07c.93477"
+            ]
+        ]
+    },
+    {
+        "id": "623eb07c.93477",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x02 0xFF",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "2 ON",
+        "x": 450,
+        "y": 520,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4e84a9.a1b29b58",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 580,
+        "wires": [
+            [
+                "777aac2a.9dd8d4"
+            ]
+        ]
+    },
+    {
+        "id": "777aac2a.9dd8d4",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x02 0x00",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "2 OFF",
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9a15b395.e31d1",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 680,
+        "wires": [
+            [
+                "83d7ed23.ed7c8"
+            ]
+        ]
+    },
+    {
+        "id": "83d7ed23.ed7c8",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x03 0xFF",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "3 ON",
+        "x": 450,
+        "y": 680,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a75e417d.90c7d",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 740,
+        "wires": [
+            [
+                "d80243f9.3ff95"
+            ]
+        ]
+    },
+    {
+        "id": "d80243f9.3ff95",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x03 0x00",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "3 OFF",
+        "x": 450,
+        "y": 740,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4cb61723.521c38",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 840,
+        "wires": [
+            [
+                "89348b93.3656f8"
+            ]
+        ]
+    },
+    {
+        "id": "89348b93.3656f8",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x04 0xFF",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "4 ON",
+        "x": 450,
+        "y": 840,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "438c970c.d94618",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 900,
+        "wires": [
+            [
+                "5187f337.2d8dcc"
+            ]
+        ]
+    },
+    {
+        "id": "5187f337.2d8dcc",
+        "type": "exec",
+        "z": "c4602fe9.70d11",
+        "command": "i2cset -y 1 0x10 0x04 0x00",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "4 OFF",
+        "x": 450,
+        "y": 900,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "688d140d.1d701c",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "ALL ON",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "9e2df1b1.4023e",
+                "623eb07c.93477",
+                "83d7ed23.ed7c8",
+                "89348b93.3656f8"
+            ]
+        ]
+    },
+    {
+        "id": "3fbc4d38.10cc52",
+        "type": "inject",
+        "z": "c4602fe9.70d11",
+        "name": "ALL OFF",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "e598efa6.978e8",
+                "777aac2a.9dd8d4",
+                "d80243f9.3ff95",
+                "5187f337.2d8dcc"
+            ]
+        ]
+    },
+    {
+        "id": "9fa81c00.77836",
+        "type": "link in",
+        "z": "c4602fe9.70d11",
+        "name": "RELAY 1 ON",
+        "links": [
+            "2620c723.0e6d58"
+        ],
+        "x": 195,
+        "y": 360,
+        "wires": [
+            [
+                "9e2df1b1.4023e"
+            ]
+        ]
+    },
+    {
+        "id": "34cf266d.357efa",
+        "type": "link in",
+        "z": "c4602fe9.70d11",
+        "name": "RELAY 1 OFF",
+        "links": [],
+        "x": 195,
+        "y": 420,
+        "wires": [
+            [
+                "e598efa6.978e8"
+            ]
+        ]
+    },
+    {
+        "id": "3ed9d292.95ef3e",
+        "type": "link in",
+        "z": "c4602fe9.70d11",
+        "name": "RELAY 2 ON",
+        "links": [],
+        "x": 195,
+        "y": 520,
+        "wires": [
+            [
+                "623eb07c.93477"
+            ]
+        ]
+    },
+    {
+        "id": "fd177eda.9c765",
+        "type": "link in",
+        "z": "c4602fe9.70d11",
+        "name": "RELAY 2 OFF",
+        "links": [],
+        "x": 195,
+        "y": 580,
+        "wires": [
+            [
+                "777aac2a.9dd8d4"
+            ]
+        ]
+    },
+    {
+        "id": "91e2306f.7b304",
+        "type": "link in",
+        "z": "c4602fe9.70d11",
+        "name": "RELAY 3 ON",
+        "links": [],
+        "x": 195,
+        "y": 680,
+        "wires": [
+            [
+                "83d7ed23.ed7c8"
+            ]
+        ]
+    },
+    {
+        "id": "d42997a3.94e1b8",
+        "type": "link in",
+        "z": "c4602fe9.70d11",
+        "name": "RELAY 3 OFF",
+        "links": [],
+        "x": 195,
+        "y": 740,
+        "wires": [
+            [
+                "d80243f9.3ff95"
+            ]
+        ]
+    },
+    {
+        "id": "6cc5fc52.b02c94",
+        "type": "link in",
+        "z": "c4602fe9.70d11",
+        "name": "RELAY 4 ON",
+        "links": [],
+        "x": 195,
+        "y": 840,
+        "wires": [
+            [
+                "89348b93.3656f8"
+            ]
+        ]
+    },
+    {
+        "id": "4a0e53e6.7aba9c",
+        "type": "link in",
+        "z": "c4602fe9.70d11",
+        "name": "RELAY 4 OFF",
+        "links": [],
+        "x": 195,
+        "y": 900,
+        "wires": [
+            [
+                "5187f337.2d8dcc"
+            ]
+        ]
+    }
+]
